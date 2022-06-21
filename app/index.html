@@ -1,15 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
-    
+<html lang="ru">
 
-    <script src="js/main.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Food</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="header__inner">
+
+        <a class="header__logo" href="#">
+          <img class="header__logo-img" src="images/SimpleFood.svg" alt="Логотип">
+        </a>
+
+        <menu class="menu">
+
+          <ul class="menu__items">
+
+            <li class="menu__item">
+              <a href="#" class="menu__link menu__link--active">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Блюда</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Контакты</a>
+            </li>
+
+          </ul>
+
+          <ul class="menu__icons">
+
+            <li class="menu__icon">
+              <button class="search__btn" href="#">
+              </button>
+            </li>
+            <li class="menu__icon">
+              <a class="cart__btn" href="#">
+                <img class="cart__btn-img" src="images/Cart icon.svg" alt="Корзина покупателя">
+                <span class="cart__btn-num">4</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </menu>
+
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="container">
+
+      <div class="hero-section__inner" style="background-image: url('../images/Scooter Guy.png')">
+
+        <h1 class="hero-section__title">
+          Доставка
+          <span class="text-color">за 15 минут</span>
+        </h1>
+
+        <p class="hero-section__text">
+          Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
+        </p>
+
+        <ul class="hero-section__links">
+          <li class="hero-section__link">
+            <a href="#" class="hero-section__order-link">Заказать</a>
+          </li>
+          <li class="hero-section__link">
+            <a href="#" class="hero-section__more-link">Подробнее</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </section>
+
+
+  <script src="js/main.min.js"></script>
 </body>
+
 </html>
