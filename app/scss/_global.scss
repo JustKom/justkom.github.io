@@ -4,11 +4,12 @@ body {
   line-height: 1.5;
   background-color: #fff;
   @extend %rubik-400;
+  outline: transparent;
 }
 
 .container {
   width: 1200px;
-  padding: 0 20px 0 7px;
+  padding: 0 15px 0 12px;
   margin: 0 auto;
 }
 
