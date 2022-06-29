@@ -3,8 +3,9 @@ body {
   font-size: 20px;
   line-height: 1.5;
   background-color: #fff;
-  @extend %rubik-400;
+  font-weight: 400;
   outline: transparent;
+  font-family: 'Rubik';
 }
 
 .container {
@@ -38,6 +39,23 @@ a {
 h2 {
   @extend %rubik-500;
 }
-address {
-  font-style: normal;
+
+
+.logo {
+  padding: 5px 2px 2px 2px;
+  transition: all .3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.01);
+    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    border-radius: 5px;
+  }
+
+  &:active {
+    opacity: .5;
+  }
 }

@@ -1,7 +1,7 @@
 $(function () {
 
-  $('.menu__link').on('click', function () {
-    $('.menu__link').removeClass('selected');
+  $('.menu__link, .filter__btn').on('click', function () {
+    $('.menu__link, .filter__btn').removeClass('selected');
     $(this).addClass('selected');
   });
 
