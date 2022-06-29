@@ -5,8 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Food</title>
-  <link rel="shortcut icon" href="images/icons/favicon.svg" type="image-svg" />
+  <title>Simple Food | Главная страница</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+  <link rel="manifest" href="images/icons/site.webmanifest">
+  <link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -25,7 +31,7 @@
           <ul class="menu__items">
 
             <li class="menu__item">
-              <a href="#" class="menu__link">Главная</a>
+              <a href="#" class="menu__link selected">Главная</a>
             </li>
             <li class="menu__item">
               <a href="#" class="menu__link">Блюда</a>
@@ -66,16 +72,20 @@
   <section class="hero-section">
     <div class="container">
 
+      <h1 class="sr-only">Главная страница</h1>
+
       <div class="hero-section__inner" style="background-image: url('../images/Scooter Guy.png')">
 
-        <h1 class="hero-section__title">
+        <div class="hero-section__title">
           Доставка
           <span class="text-color">за 15 минут</span>
-        </h1>
+        </div>
 
-        <p class="hero-section__text">
-          Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
-        </p>
+        <div class="hero-section__text">
+          <p>
+            Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
+          </p>
+        </div>
 
         <ul class="hero-section__links">
           <li class="hero-section__link">
@@ -335,7 +345,9 @@
         <ul class="footer__contacts">
           <ul class="footer__social-cont">
             <li>
-              <span class="footer__map">ул. Т.Г.Шевченко, 1</span>
+              <address class="footer__map">
+                <a href="#">ул. Т.Г.Шевченко, 1</a>
+              </address>
             </li>
             <li>
               <a class="footer__number" href="tel:380501112233">380501112233</a>
