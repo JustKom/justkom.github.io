@@ -5,6 +5,14 @@ $(function () {
     $(this).addClass('selected');
   });
 
+
+  $('.slider').slick({
+    dots: true,
+    fade:true,
+    prevArrow: '<button type="button" class="slick-prev"></button>',
+    nextArrow: '<button type="button" class="slick-next"></button>'
+  });
+
   var mixer = mixitup('.category');
 
-})
+});
