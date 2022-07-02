@@ -3,16 +3,22 @@ $default: #31352B;
 $text: #363853;
 
 %rubik-300 {
-  font-family: 'Rubik-Light', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 300;
 }
 
 %rubik-400 {
-  font-family: 'Rubik-Regular', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 400;
 }
 
+%rubik-italic {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
 %rubik-500 {
-  font-family: 'Rubik-Medium', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 500;
 }
