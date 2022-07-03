@@ -5,6 +5,11 @@ $(function () {
     $(this).addClass('selected');
   });
 
+  $('.header__burger').on('click', function () {
+    $('.header__burger, .menu__items').toggleClass('active');
+    $('body').toggleClass('lock');
+  });
+
 
   $('.slider').slick({
     dots: true,
@@ -13,6 +18,16 @@ $(function () {
     nextArrow: '<button type="button" class="slick-next"></button>',
     autoplay: true,
     
+  });
+
+  $('.filter').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    centerMode: false,
+    variableWidth: true,
+    arrows: false,
+    swipeToSlide: true
   });
 
   var mixer = mixitup('.category');

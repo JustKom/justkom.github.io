@@ -26,3 +26,9 @@ $gray: #c2c2c2;
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
 }
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
