@@ -246,6 +246,10 @@
     position: relative;
   }
 
+  &__list:not(:last-child) {
+    margin-right: 20px;
+  }
+
   &__btn {
     padding: 13px 32px;
     background-color: #FFFFFF;
@@ -257,6 +261,7 @@
     align-items: center;
     transition: all .3s;
     fill: $text;
+    width: max-content;
 
     &:focus {
       background-color: #FFFFFF;
@@ -700,6 +705,11 @@
 .app {
 
   margin-bottom: 120px;
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__background {
     background-repeat: no-repeat;
@@ -954,17 +964,11 @@
 
 @media (max-width: 992px) {}
 
-@media (max-width: 768px) {}
-
-@media (max-width: 576px) {
+@media (max-width: 768px) {
 
   .header {
 
     padding: 22px 22px 24px 0;
-
-    .logo {
-      width: 115px;
-    }
 
     .logo+.menu__items {
       justify-content: space-between;
@@ -1021,23 +1025,6 @@
 
   .menu {
 
-    &__icons {}
-
-    // &__items {
-    //   position: absolute;
-    //   left: 0;
-    //   right: 0;
-    //   top: 0;
-    //   background-color: #fff;
-    //   display: block;
-    //   height: 100vh;
-    //   padding-top: 80px;
-    //   margin: 0;
-    //   transform: translateX(800px);
-    //   transition: transform .5s;
-    //   z-index: 1;
-    // }
-
     &__items.active {
       transform: translateX(0);
     }
@@ -1089,14 +1076,140 @@
 
   .hero-section {
 
+    margin-bottom: 80px;
+
+    &__inner {
+      padding: 100px 0;
+      box-shadow: inset 0 0 0 600px rgba(255, 255, 255, 0.85);
+    }
+  }
+
+  .filter {
+
+    margin-right: 0;
+    margin-bottom: 30px;
+    overflow-y: hidden;
+    justify-content: center;
+
+    &__list {
+      font-size: 14px;
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
+
+    &__list:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &__list:last-child {
+      margin-right: 2px;
+    }
+
+    &__btn {
+      padding: 11px 16px;
+    }
+
+    &__btn-img {
+      margin-right: 5px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .category {
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 50px;
+  }
+
+  .delivery {
+    margin: 80px 0;
+
+    &__background {
+      margin-left: 0;
+      background-position: center;
+      box-shadow: inset 0 0 0 600px rgba(255, 255, 255, 0.85);
+    }
+
+    &__inner {
+      margin: 0 auto;
+    }
+  }
+
+  .best {
+    margin-bottom: 85px;
+
+    .title {
+      transform: translateX(0);
+    }
+
+    &__list {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &__item {
+      display: inline-block;
+    }
+
+    .slick-list {
+      text-align: center;
+      padding: 2px;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    .slick-slide {
+      padding: 0 5px;
+    }
+
+    .slick-dots {
+
+      display: flex;
+      justify-content: center;
+      transform: translateY(30px);
+
+      li {
+        button {
+          background-color: #C2C2C2;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          color: transparent;
+          font-size: 5px;
+          transition: background-color .3s;
+        }
+      }
+
+      li:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      .slick-active button {
+        background-color: $accent;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+
+  .header {
+
+    .logo {
+      width: 115px;
+    }
+  }
+
+  .hero-section {
+
     margin-bottom: 40px;
 
     &__inner {
-      padding: 25px 0;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: right;
-      box-shadow: inset 0 0 0 600px rgba(255, 255, 255, 0.85);
+      padding: 25px 0;      
     }
 
     &__title {
@@ -1117,31 +1230,6 @@
 
     .title {
       margin-bottom: 30px;
-    }
-  }
-
-  .filter {
-
-    margin-right: 0px;
-    margin-bottom: 30px;
-
-    &__list {
-      font-size: 14px;
-      margin: 5px;
-    }
-
-    &__list:not(:last-child) {
-      // margin-right: 10px;
-    }
-
-    &__btn {
-      padding: 11px 16px;
-    }
-
-    &__btn-img {
-      margin-right: 5px;
-      width: 20px;
-      height: 20px;
     }
   }
 
@@ -1168,12 +1256,6 @@
 
     margin: 40px 0;
 
-    &__background {
-      margin-left: 0;
-      background-position: center;
-      box-shadow: inset 0 0 0 600px rgba(255, 255, 255, 0.85);
-    }
-
     &__inner {
       margin: 0;
       padding: 25px 0;
@@ -1192,22 +1274,7 @@
     }
   }
 
-  .best {
-    margin-bottom: 40px;
-
-    .title {
-      transform: translateX(0);
-    }
-
-    &__list {
-      display: table;
-      margin: 0 auto;
-    }
-
-    &__item {
-      display: inline-block;
-    }
-  }
+  
 
   .review {
     margin-bottom: 40px;

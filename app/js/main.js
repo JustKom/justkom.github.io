@@ -13,21 +13,43 @@ $(function () {
 
   $('.slider').slick({
     dots: true,
-    fade:true,
+    fade: true,
     prevArrow: '<button type="button" class="slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-next"></button>',
     autoplay: true,
-    
+
   });
 
-  $('.filter').slick({
-    dots: false,
+  $('.best__list').slick({
+    dots: true,
     infinite: false,
     speed: 300,
-    centerMode: false,
-    variableWidth: true,
-    arrows: false,
-    swipeToSlide: true
+    arrows:false,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [{
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: "unslick"
+        
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
   });
 
   var mixer = mixitup('.category');
