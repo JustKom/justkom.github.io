@@ -20,14 +20,17 @@ $(function () {
 
   });
 
+
   $('.best__list').slick({
     dots: true,
     infinite: false,
     speed: 300,
-    arrows:false,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    arrows: false,
     responsive: [{
+        breakpoint: 992,
+        settings: "unslick"
+      },
+      {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
@@ -40,15 +43,8 @@ $(function () {
           slidesToShow: 1,
           slidesToScroll: 1
         }
-      },
-      {
-        breakpoint: 992,
-        settings: "unslick"
-        
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
+
     ]
   });
 
