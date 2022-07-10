@@ -5,6 +5,11 @@ $silver: #ececec;
 $light: #f9faff;
 $gray: #c2c2c2;
 
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
 
 %rubik-300 {
   font-family: 'Rubik', sans-serif;
@@ -25,4 +30,10 @@ $gray: #c2c2c2;
 %rubik-500 {
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
 }

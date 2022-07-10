@@ -8,8 +8,12 @@ body {
   font-family: 'Rubik';
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
-  width: 1200px;
+  max-width: 1200px;
   padding: 0 15px 0 12px;
   margin: 0 auto;
 }
@@ -91,5 +95,38 @@ h2 {
     background-color: rgba(255, 122, 80, 0.1);
     color: $accent;
     fill: $accent;
+  }
+}
+
+@media (max-width: 768px) {
+  .lock .header,
+  .lock {
+    box-shadow: inset 0 0 0 600px rgba(0, 0, 0, 0.5);
+    // z-index: 5;
+  }
+
+  .lock .hero-section__inner,
+  .lock .filter__btn,
+  .lock .category__item {
+    background-image: none !important;
+    box-shadow: inset 0 0 0 600px rgba(0, 0, 0, 0);
+    z-index: -10;
+    background-color: transparent;
+  }
+
+  .lock .category__img {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .button {
+    font-size: 16px;
+  }
+
+  .title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: $text;
   }
 }
