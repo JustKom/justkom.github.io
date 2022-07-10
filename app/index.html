@@ -38,7 +38,52 @@
             <a href="#" class="menu__link">Контакты</a>
           </li>
 
+          <li class="menu__item burger__contacts">
+            <address class="footer__contacts ">
+              <ul class="footer__social-cont">
+                <li>
+                  <a class="footer__map" href="#">ул. Т.Г.Шевченко, 1</a>
+                </li>
+                <li>
+                  <a class="footer__number" href="tel:380501112233">380501112233</a>
+                </li>
+                <li>
+                  <a class="footer__email" href="mailto:support@sfood.com">support@sfood.com</a>
+                </li>
+              </ul>
+
+              <ul class="social">
+                <li class="social__items">
+                  <a class="social__link social__link-facebook" href="#">
+                    <svg class="image social__facebook-img">
+                      <use xlink:href="images/sprite.svg#facebook" width="10"></use>
+                    </svg>
+                    <span class="sr-only">Перейти на наш фейсбук</span>
+                  </a>
+                </li>
+                <li class="social__items">
+                  <a class="social__link social__link-twitter" href="#">
+                    <span class="sr-only">Перейти на наш твиттер</span>
+                    <svg class="image social__twitter-img">
+                      <use xlink:href="images/sprite.svg#twitter" width="21"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__items">
+                  <a class="social__link social__link-instagram" href="#">
+                    <span class="sr-only">Перейти на наш инстаграм</span>
+                    <svg class="image social__instagram-img">
+                      <use xlink:href="images/sprite.svg#instagram" width="20"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </li>
+
         </ul>
+
+
 
         <ul class="menu__icons">
 
@@ -327,6 +372,7 @@
               <img class="best__item-img" src="images/restaurants/blaze-pizza.jpg" alt="Blaze Pizza">
               <h3 class="best__item-text">Blaze Pizza</h3>
               <div class="best__item-bottom">
+                <span class="sr-only">Время работы ресторана</span>
                 <span class="best__time">11:00 - 22:00</span>
                 <a class="best__item-link" href="#">
                   <svg class="best__item-link-img">
@@ -341,6 +387,7 @@
               <img class="best__item-img" src="images/restaurants/pizza-runcho.jpg" alt="Pizza Runcho">
               <h3 class="best__item-text">Pizza Runcho</h3>
               <div class="best__item-bottom">
+                <span class="sr-only">Время работы ресторана</span>
                 <span class="best__time">11:00 - 22:00</span>
                 <a class="best__item-link" href="#">
                   <svg class="best__item-link-img">
@@ -355,6 +402,7 @@
               <img class="best__item-img" src="images/restaurants/pizza-hut.jpg" alt="Pizza Hut">
               <h3 class="best__item-text">Pizza Hut</h3>
               <div class="best__item-bottom">
+                <span class="sr-only">Время работы ресторана</span>
                 <span class="best__time">11:00 - 22:00</span>
                 <a class="best__item-link" href="#">
                   <svg class="best__item-link-img">
@@ -369,6 +417,7 @@
               <img class="best__item-img" src="images/restaurants/mcd.jpg" alt="McDonald`s">
               <h3 class="best__item-text">McDonald`s</h3>
               <div class="best__item-bottom">
+                <span class="sr-only">Время работы ресторана</span>
                 <span class="best__time">11:00 - 22:00</span>
                 <a class="best__item-link" href="#">
                   <svg class="best__item-link-img">
@@ -383,6 +432,7 @@
               <img class="best__item-img" src="images/restaurants/kfc.jpg" alt="KFC">
               <h3 class="best__item-text">KFC</h3>
               <div class="best__item-bottom">
+                <span class="sr-only">Время работы ресторана</span>
                 <span class="best__time">11:00 - 22:00</span>
                 <a class="best__item-link" href="#">
                   <svg class="best__item-link-img">
@@ -397,6 +447,7 @@
               <img class="best__item-img" src="images/restaurants/star-burgers.jpg" alt="Star Burgers">
               <h3 class="best__item-text">Star Burgers</h3>
               <div class="best__item-bottom">
+                <span class="sr-only">Время работы ресторана</span>
                 <span class="best__time">11:00 - 22:00</span>
                 <a class="best__item-link" href="#">
                   <svg class="best__item-link-img">
@@ -498,7 +549,7 @@
 
     <section class="app">
       <div class="container">
-        
+
         <div class="app__inner">
           <h2 class="title">Скачайте мобильное приложение</h2>
           <p class="app__text">
@@ -508,17 +559,17 @@
           <ul class="app__list">
             <li>
               <a class="app__link" href="#">
-                <img src="images/app-store.svg" width="120" height="40" alt="">
+                <span class="sr-only">Наше приложение в AppStore</span>
               </a>
             </li>
             <li>
               <a class="app__link" href="#">
-                <img src="images/google-play.svg" width="135" height="40" alt="">
+                <span class="sr-only">Наше приложение в GooglePlay</span>
               </a>
             </li>
           </ul>
         </div>
-        
+
         <img class="app__background" src="images/app-bg.jpg">
         </img>
       </div>
@@ -653,10 +704,10 @@
 
 
     </div>
-    
-      <div class="footer__bottom">
-        © 2022 Simple Food
-      </div>
+
+    <div class="footer__bottom">
+      © 2022 Simple Food
+    </div>
   </footer>
 
 

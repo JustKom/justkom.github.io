@@ -21,32 +21,19 @@ $(function () {
   });
 
 
-  $('.best__list').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    arrows: false,
-    responsive: [{
-        breakpoint: 992,
-        settings: "unslick"
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
 
-    ]
-  });
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    $('.best__list').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    })}
+      else {
+        settings: "unslick"
+      };
 
   var mixer = mixitup('.category');
 
