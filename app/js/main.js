@@ -22,18 +22,24 @@ $(function () {
 
 
 
+  $(function myFunction() {
+    document.getElementById("type-dropdown").classList.toggle("show");
+  });
+
+
+
   if (window.matchMedia("(max-width: 768px)").matches) {
     $('.best__list').slick({
-        dots: true,
-        infinite: false,
-        speed: 300,
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    })}
-      else {
-        settings: "unslick"
-      };
+      dots: true,
+      infinite: false,
+      speed: 300,
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    })
+  } else {
+    settings: "unslick"
+  };
 
   var mixer = mixitup('.category');
 

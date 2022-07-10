@@ -5,7 +5,7 @@
 @import 'global';
 
 .header {
-  padding: 55px 0 25px;
+  padding: 55px 0 55px;
   position: fixed;
   background-color: #fff;
   width: 100%;
@@ -989,6 +989,110 @@
 
   &__items:not(:last-child) {
     margin-right: 13px;
+  }
+}
+
+// <----------------catalog---------------->
+
+.breadcrumps {
+  padding-top: 168px;
+  background-color: rgba(255, 122, 80, 0.1);
+
+  &__list {
+    padding: 24px 0;
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 14px;
+
+    &:not(:last-child) {
+      padding-right: 18px;
+
+      &::before {
+        @include pseudo;
+        background-image: url('../images/sprite.svg#chevron');
+        width: 12px;
+        height: 12px;
+        background-size: cover;
+        top: 4px;
+        right: 2px;
+      }
+    }
+  }
+}
+
+.prod-catalog {
+  margin: 60px 0 120px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__sort {
+    display: flex;
+
+    & li:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    .dropdown {
+      background-color: #fff;
+      border: 1px solid #C2C2C2;
+      border-radius: 3px;
+      padding: 15px 41px 15px 15px;
+      font-size: 14px;
+      line-height: 1.2;
+      letter-spacing: 0.03em;
+      color: $default;
+      position: relative;
+      cursor: pointer;
+
+      &::after {
+        @include pseudo;
+        background-image: url('../images/sprite.svg#chevron');
+        width: 14px;
+        height: 14px;
+        top: 15px;
+        right: 14px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: rotate(90deg);
+        fill: #c2c2c2;
+      }
+
+      &:focus {
+        border-color: $accent;
+      }
+
+      &:hover {
+        border-color: $accent;
+        color: $accent;
+        fill: $accent;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f6f6f6;
+        min-width: 230px;
+        border: 1px solid #ddd;
+        z-index: 1;
+
+        a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+      }
+
+      .show {
+        display: block;
+      }
+    }
   }
 }
 

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Food | Каталог</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+  <link rel="manifest" href="images/icons/site.webmanifest">
+  <link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="menu">
+
+        <a class="logo" href="#">
+          <img class="logo-img" src="images/SimpleFood.svg" width="200" height="39" alt="Логотип сайта Simple-Food">
+        </a>
+
+        <ul class="menu__items">
+
+          <li class="menu__item">
+            <a href="#" class="menu__link selected">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Блюда</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="menu__icons">
+
+          <li class="menu__icon">
+            <button class="search__btn">
+              <span class="sr-only">Поиск по сайту</span>
+              <svg class="search__btn-img">
+                <use xlink:href="images/sprite.svg#Searchbtn"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="menu__icon">
+            <a class="cart__btn" href="#">
+              <span class="sr-only">Перейти в корзину покупок</span>
+              <svg class="cart__btn-img">
+                <use xlink:href="images/sprite.svg#Carticon"></use>
+              </svg>
+            </a>
+          </li>
+
+          <button class="header__burger" type="menu">
+            <span class="line"></span>
+            <span class="sr-only">Натисніть, щоб дістатися меню</span>
+          </button>
+
+        </ul>
+
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="breadcrumps">
+      <div class="container">
+
+        <h2 class="sr-only">Навигация по сайту</h2>
+        <ul class="breadcrumps__list">
+          <li class="breadcrumps__item">
+            <a href="#">Главная</a>
+          </li>
+          <li class="breadcrumps__item">
+            <a href="#">Каталог товаров</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="prod-catalog">
+      <div class="container">
+        <div class="prod-catalog__top">
+          <h2 class="title">Каталог продуктов</h2>
+          <ul class="prod-catalog__sort">
+            <li>
+              <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">По названию</button>
+                <div id="type-dropdown" class="dropdown-content">
+                  <a href="#price">По цене</a>
+                  <a href="#weight">По весу</a>
+                  <a href="#popular">По популярности</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">по 12</button>
+                <div id="type-dropdown" class="dropdown-content">
+                  <a href="#price">по 24</a>
+                  <a href="#weight">по 36</a>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="app">
+      <div class="container">
+
+        <div class="app__inner">
+          <h2 class="title">Скачайте мобильное приложение</h2>
+          <p class="app__text">
+            Рестораны, которые вы любите - в ваших руках. Устанавливайте приложение и заказывайте еду в любом удобном
+            месте.
+          </p>
+          <ul class="app__list">
+            <li>
+              <a class="app__link" href="#">
+                <span class="sr-only">Наше приложение в AppStore</span>
+              </a>
+            </li>
+            <li>
+              <a class="app__link" href="#">
+                <span class="sr-only">Наше приложение в GooglePlay</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <img class="app__background" src="images/app-bg.jpg">
+        </img>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer__top">
+
+        <div class="footer__form">
+          <a class="logo logo__footer" href="#">
+            <img class="logo-img" src="images/SimpleFood.svg" alt="Логотип">
+          </a>
+          <label>
+            <input class="footer__email-input" type="email" name="email" id="email" placeholder="Ваш email" required>
+          </label>
+          <button class="footer__subscribe" type="submit">
+            <svg class="footer__telegram-img">
+              <use xlink:href="images/sprite.svg#telegram"></use>
+            </svg>
+            Подписаться
+          </button>
+        </div>
+
+        <ul class="footer__list">
+          <li class="footer__link">
+            <a href="#" class="footer__link-first">
+              Как это работает
+            </a>
+          </li>
+          <li class="footer__link">
+            <a href="#" class="footer__link-first">
+              Продукты
+            </a>
+          </li>
+          <li class="footer__link">
+            <a href="#" class="footer__link-first">
+              Блюда
+            </a>
+          </li>
+          <li class="footer__link">
+            <a href="#" class="footer__link-first">
+              Меню
+            </a>
+          </li>
+          <li class="footer__link">
+            <a href="#" class="footer__link-second">
+              О нас
+            </a>
+          </li>
+          <li class="footer__link">
+            <a href="#" class="footer__link-second">
+              Новости
+            </a>
+          </li>
+          <li class="footer__link">
+            <a href="#" class="footer__link-second">
+              Партнеры
+            </a>
+          </li>
+          <li class="footer__link">
+            <a href="#" class="footer__link-second">
+              ЧаВо
+            </a>
+          </li>
+          <li class="footer__link">
+            <a href="#" class="footer__link-third">
+              Скачать приложение
+            </a>
+          </li>
+          <li class="footer__link">
+            <a href="#" class="footer__link-third">
+              Блог
+            </a>
+          </li>
+          <li class="footer__link">
+            <a href="#" class="footer__link-third">
+              Что нового?
+            </a>
+          </li>
+          <li class="footer__link">
+            <a href="#" class="footer__link-third">
+              Карта сайта
+            </a>
+          </li>
+        </ul>
+
+        <address class="footer__contacts">
+          <ul class="footer__social-cont">
+            <li>
+              <a class="footer__map" href="#">ул. Т.Г.Шевченко, 1</a>
+            </li>
+            <li>
+              <a class="footer__number" href="tel:380501112233">380501112233</a>
+            </li>
+            <li>
+              <a class="footer__email" href="mailto:support@sfood.com">support@sfood.com</a>
+            </li>
+          </ul>
+
+          <ul class="social">
+            <li class="social__items">
+              <a class="social__link social__link-facebook" href="#">
+                <svg class="image social__facebook-img">
+                  <use xlink:href="images/sprite.svg#facebook" width="10"></use>
+                </svg>
+                <span class="sr-only">Перейти на наш фейсбук</span>
+              </a>
+            </li>
+            <li class="social__items">
+              <a class="social__link social__link-twitter" href="#">
+                <span class="sr-only">Перейти на наш твиттер</span>
+                <svg class="image social__twitter-img">
+                  <use xlink:href="images/sprite.svg#twitter" width="21"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__items">
+              <a class="social__link social__link-instagram" href="#">
+                <span class="sr-only">Перейти на наш инстаграм</span>
+                <svg class="image social__instagram-img">
+                  <use xlink:href="images/sprite.svg#instagram" width="20"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </address>
+      </div>
+
+
+    </div>
+
+    <div class="footer__bottom">
+      © 2022 Simple Food
+    </div>
+  </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/mixitup.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
