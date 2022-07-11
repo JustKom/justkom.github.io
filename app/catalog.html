@@ -92,21 +92,55 @@
           <h2 class="title">Каталог продуктов</h2>
           <ul class="prod-catalog__sort">
             <li>
-              <div class="dropdown">
+              <!-- <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn">По названию</button>
                 <div id="type-dropdown" class="dropdown-content">
                   <a href="#price">По цене</a>
                   <a href="#weight">По весу</a>
                   <a href="#popular">По популярности</a>
                 </div>
+              </div> -->
+              <!-- <select class="dropdown" name="dropdown-type">
+                <option class="dropdown-type__value" value="1">По названию</option>
+                <option class="dropdown-type__value" value="2">По цене</option>
+                <option class="dropdown-type__value" value="3">По весу</option>
+                <option class="dropdown-type__value" value="4">По популярности</option>
+              </select> -->
+
+              <div class="select" data-state="">
+                <div class="select__title" data-default="by-name">По названию</div>
+                <div class="select__content">
+
+                  <input id="single-by-name" class="select__input" type="radio" name="singleSelect" />
+                  <label for="single-by-name" class="select__label">По названию</label>
+
+                  <input id="single-by-price" class="select__input" type="radio" name="singleSelect" />
+                  <label for="single-by-price" class="select__label">По цене</label>
+
+                  <input id="single-by-weight" class="select__input" type="radio" name="singleSelect" />
+                  <label for="single-by-weight" class="select__label">По весу</label>
+
+                  <input id="single-by-popular" class="select__input" type="radio" name="singleSelect" />
+                  <label for="single-by-popular" class="select__label">По популярности</label>
+                </div>
               </div>
             </li>
             <li>
-              <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">по 12</button>
-                <div id="type-dropdown" class="dropdown-content">
-                  <a href="#price">по 24</a>
-                  <a href="#weight">по 36</a>
+              <div class="select number__select" data-state="">
+                <div class="select__title" data-default="by-num">По 12</div>
+                <div class="select__content">
+
+                  <input id="single-twelwe" class="select__input" type="radio" name="singleSelect" />
+                  <label for="single-twelwe" class="select__label">По 12</label>
+
+                  <input id="single-xtwo" class="select__input" type="radio" name="singleSelect" />
+                  <label for="single-xtwo" class="select__label">По 24</label>
+
+                  <input id="single-xthree" class="select__input" type="radio" name="singleSelect" />
+                  <label for="single-xthree" class="select__label">По 36</label>
+
+                  <input id="single-xfour" class="select__input" type="radio" name="singleSelect" />
+                  <label for="single-xfour" class="select__label">По 48</label>
                 </div>
               </div>
             </li>
