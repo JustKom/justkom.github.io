@@ -5,10 +5,24 @@ $silver: #ececec;
 $light: #f9faff;
 $gray: #c2c2c2;
 
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
+$breakpoints: ('phone': 560px,
+  'tablet': 768px,
+  'tablet-2': 992px,
+  'desktop': 1200px);
+
+@mixin mq($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type==min {
+      $width: $width - 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
 
 @mixin pseudo($display: block, $pos: absolute, $content: '') {
   content: $content;
