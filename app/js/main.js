@@ -20,6 +20,22 @@ $(function () {
 
   });
 
+  $('.best__list').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: "unslick",
+      }
+    ],
+    mobileFirst: true
+  }); 
+
   
 
   const selectSingle = document.querySelector('.select');
@@ -43,20 +59,6 @@ $(function () {
     });
   }
 
-
-
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    $('.best__list').slick({
-      dots: true,
-      infinite: false,
-      speed: 300,
-      arrows: false,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    })
-  } else {
-    settings: "unslick"
-  };
 
   var mixer = mixitup('.category');
 

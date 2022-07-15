@@ -789,7 +789,7 @@
   margin-bottom: 120px;
 
   @include mq('tablet') {
-    margin-bottom: 85px;
+    margin-bottom: 40px;
   }
 
   .title {
@@ -813,6 +813,34 @@
       display: block;
       margin: 0 auto;
       text-align: center;
+
+      .slick-list {
+        margin-bottom: 30px;
+      }
+
+      .slick-dots {
+        display: flex;
+        justify-content: center;
+
+        & .slick-active {
+          button {
+            background-color: $accent;
+          }
+        }
+
+        & li:not(:last-child) {
+          margin-right: 15px;
+        }
+
+        button {
+          font-size: 0;
+          width: 15px;
+          height: 15px;
+          background-color: $gray;
+          border-radius: 50%;
+          transition: background-color .3s;
+        }
+      }
     }
   }
 
@@ -842,32 +870,7 @@
         padding: 0 5px;
       }
 
-      .slick-dots {
-
-        display: flex;
-        justify-content: center;
-        transform: translateY(30px);
-
-        li {
-          button {
-            background-color: #C2C2C2;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            color: transparent;
-            font-size: 5px;
-            transition: background-color .3s;
-          }
-        }
-
-        li:not(:last-child) {
-          margin-right: 15px;
-        }
-
-        .slick-active button {
-          background-color: $accent;
-        }
-      }
+      
     }
 
     &:hover {
