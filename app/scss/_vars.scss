@@ -30,6 +30,14 @@ $breakpoints: ('phone': 560px,
   position: $pos;
 }
 
+@mixin checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
 %rubik-300 {
   font-family: 'Rubik', sans-serif;
   font-weight: 300;
@@ -49,10 +57,4 @@ $breakpoints: ('phone': 560px,
 %rubik-500 {
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
-}
-
-@mixin pseudo($display: block, $pos: absolute, $content: '') {
-  content: $content;
-  display: $display;
-  position: $pos;
 }
