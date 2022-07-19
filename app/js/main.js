@@ -76,6 +76,15 @@ $(function () {
     $(this).addClass('selected');
   });
 
+
+
+  $('.pagination__link').on('click', function () {
+    $('.pagination__link').removeClass('active');
+    $(this).addClass('active');
+  });
+
+
+
   $('.header__burger').on('click', function () {
     $('.header__burger, .menu__items').toggleClass('active');
     $('body').toggleClass('lock');
