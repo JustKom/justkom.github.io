@@ -1513,6 +1513,10 @@
   padding-top: 168px;
   background-color: rgba(255, 122, 80, 0.1);
 
+  @include mq('tablet') {
+    padding-top: 100px;
+  }
+
   &__list {
     padding: 24px 0;
     display: flex;
@@ -1547,9 +1551,23 @@
     margin-bottom: 60px;
     align-items: center;
 
+    @include mq('tablet') {
+      display: block;
+      margin-bottom: 30px;
+    }
+
     .title {
       margin-bottom: 0;
+
+      @include mq('tablet') {
+        text-align: left;
+        margin-bottom: 15px;
+      }
     }
+  }
+
+  .popup__close {
+    display: none;
   }
 
   &__select {
@@ -1626,6 +1644,38 @@
     }
   }
 
+  @include mq('tablet') {
+    .popup {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 98px;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 10;
+      overflow: auto;
+
+      &:target {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .popup__close {
+      position: absolute;
+      right: 15px;
+      top: 9px;
+      width: 44px;
+      height: 44px;
+      background-color: #faeded;
+      border-radius: 3px;
+      text-align: center;
+      line-height: 2.2;
+      display: block;
+    }
+  }
+
   &__inner {
     display: flex;
 
@@ -1633,6 +1683,11 @@
       max-width: 270px;
       width: 100%;
       margin-right: 30px;
+      background-color: #fff;
+
+      @include mq('tablet') {
+        // display: none;
+      }
 
       &__block {
         border: 1px solid $silver;
@@ -1808,6 +1863,18 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 10px;
       margin-bottom: 60px;
+
+      @include mq ('tablet-2') {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .category__item {
+      height: 300px;
+    }
+
+    .category__img {
+      height: inherit;
     }
   }
 }
