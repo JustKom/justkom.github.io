@@ -94,7 +94,11 @@
 
           <form class="prod-catalog__select" action="#">
 
-            <a href="#popup" class="popup__open">open</a>
+            <a href="#popup" class="popup__open">
+              <svg class="popup__open-img">
+                <use xlink:href="images/sprite.svg#filter" width="32"></use>
+              </svg>
+            </a>
 
             <select class="prod-catalog__sort prod-catalog__select-style">
               <option value="">По названию</option>
@@ -114,7 +118,11 @@
         <div class="prod-catalog__inner">
           <div class="inner-filter popup" id="popup">
 
-            <a class="popup__close" href="#header">X</a>
+            <a class="popup__close" href="#header">
+              <svg class="popup__close-img">
+                <use xlink:href="images/sprite.svg#close" width="18"></use>
+              </svg>
+            </a>
 
             <div class="inner-filter__block">
               <h3 class="inner-filter__title">Категории</h3>
@@ -423,7 +431,7 @@
       </div>
     </section>
 
-    <!-- <section class="app">
+    <section class="app">
       <div class="container">
 
         <div class="app__inner">
@@ -449,9 +457,9 @@
         <img class="app__background" src="images/app-bg.jpg">
         </img>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="sales">
+    <section class="sales">
       <div class="container">
         <h2 class="title">Акции и скидки</h2>
 
@@ -475,7 +483,7 @@
           </li>
         </ul>
       </div>
-    </section> -->
+    </section>
 
   </main>
 

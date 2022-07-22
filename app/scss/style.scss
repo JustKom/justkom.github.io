@@ -1161,6 +1161,10 @@
 
   margin-bottom: 120px;
 
+  @include mq('tablet') {
+    margin-bottom: 60px;
+  }
+
   @include mq('phone') {
     margin-bottom: 40px;
   }
@@ -1545,6 +1549,10 @@
 .prod-catalog {
   margin: 60px 0 120px;
 
+  @include mq('tablet') {
+    margin-bottom: 60px;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -1554,6 +1562,54 @@
     @include mq('tablet') {
       display: block;
       margin-bottom: 30px;
+    }
+
+    .popup__open {
+      display: none;
+      border: 2px solid transparent;
+      outline: transparent;
+      transition: border-color .3s;
+      line-height: 0;
+
+      &:focus {
+        border-color: $accent;
+      }
+
+      @include mq('tablet') {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+      }
+
+      @include mq('phone') {
+        margin-right: 10px;
+      }
+    }
+
+    .popup__open-img {
+      width: 48px;
+      height: 48px;
+      background-color: #faeded;
+      border-radius: 3px;
+      fill: $accent;
+      transition: background-color .3s, fill .3s, box-shadow .3s;
+      outline: transparent;
+      border: 2px solid transparent;
+
+      &:hover {
+        background-color: $accent;
+        fill: #fff;
+      }
+
+      &:active {
+        background-color: #faeded;
+        box-shadow: inset 0px -1px 4px 2px rgba(0, 0, 0, 0.15);
+        fill: $accent;
+      }
+
+      & use {
+        transform: translateX(7px);
+      }
     }
 
     .title {
@@ -1584,6 +1640,10 @@
   &__sort {
     margin-right: 15px;
     width: 152px;
+
+    @include mq('phone') {
+      margin-right: 10px;
+    }
   }
 
   &__amount {
@@ -1602,6 +1662,10 @@
     color: $default;
     text-shadow: none;
     transition: border-color .3s, color .3s, filter .3s;
+
+    @include mq('phone') {
+      padding: 15px 35px 15px 10px;
+    }
 
     &:focus {
       border-color: $accent;
@@ -1655,17 +1719,25 @@
       visibility: hidden;
       z-index: 10;
       overflow: auto;
+      background-color: rgba(255, 255, 255, 0.8);
 
       &:target {
         opacity: 1;
         visibility: visible;
       }
+
+      @include mq('phone') {
+        top: 0;
+        padding-top: 98px;
+        z-index: 11;
+        background-color: #fff;
+      }
     }
 
     .popup__close {
       position: absolute;
-      right: 15px;
-      top: 9px;
+      left: 212px;
+      top: 8px;
       width: 44px;
       height: 44px;
       background-color: #faeded;
@@ -1673,17 +1745,28 @@
       text-align: center;
       line-height: 2.2;
       display: block;
+
+      @include mq('phone') {
+        top: 28px;
+        left: 256px;
+      }
+
+      .popup__close-img {
+        width: 18px;
+        height: 18px;
+      }
     }
   }
 
   &__inner {
     display: flex;
 
+    @include mq('phone') {
+      display: block;
+    }
+
     .inner-filter {
-      max-width: 270px;
-      width: 100%;
       margin-right: 30px;
-      background-color: #fff;
 
       @include mq('tablet') {
         // display: none;
@@ -1693,6 +1776,8 @@
         border: 1px solid $silver;
         border-radius: 5px;
         margin-bottom: 30px;
+        background-color: #fff;
+        max-width: 270px;
       }
 
       &__title {
@@ -1770,7 +1855,7 @@
         .inner-filter__input {
           @include checkbox-hidden;
 
-          &:checked + .inner-filter__checkbox {
+          &:checked+.inner-filter__checkbox {
             border-color: $default;
             background-image: url('../images/icons/checked.svg');
             background-repeat: no-repeat;
@@ -1784,7 +1869,7 @@
         &__inner {
           padding: 25px 15px;
         }
-        
+
         &__values {
           display: flex;
           font-size: 16px;
@@ -1867,6 +1952,12 @@
       @include mq ('tablet-2') {
         grid-template-columns: repeat(3, 1fr);
       }
+
+      @include mq('phone') {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+        margin-bottom: 30px;
+      }
     }
 
     .category__item {
@@ -1882,6 +1973,10 @@
 .sales {
   margin-bottom: 120px;
 
+  @include mq('tablet') {
+    margin-bottom: 60px;
+  }
+
   .title {
     text-align: left;
   }
@@ -1890,6 +1985,43 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+
+    @include mq('phone') {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .slick-list {
+      margin-bottom: 30px;
+    }
+
+    .slick-track {
+      text-align: center;
+    }
+
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+
+      & .slick-active {
+        button {
+          background-color: $accent;
+        }
+      }
+
+      & li:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      button {
+        font-size: 0;
+        width: 15px;
+        height: 15px;
+        background-color: $gray;
+        border-radius: 50%;
+        transition: background-color .3s;
+      }
+    }
   }
 
   &__item {
@@ -1900,6 +2032,25 @@
     &:hover {
       box-shadow: 0px 3px 15px rgba(255, 104, 56, 0.5);
     }
+
+    @include mq('phone') {
+      display: inline-grid;
+      max-width: 350px;
+      width: 100%;
+
+      .slick-list {
+        // text-align: center;
+        padding: 2px;
+
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+
+      .slick-slide {
+        width: max-content;
+      }
+    }
   }
 
   &__text {
@@ -1908,5 +2059,11 @@
     font-size: 24px;
     line-height: 1.3;
     color: $default;
+    text-align: left;
+
+    @include mq('phone') {
+      max-height: 80px;
+      overflow: hidden;
+    }
   }
 }

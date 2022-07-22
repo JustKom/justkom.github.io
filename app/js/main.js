@@ -116,6 +116,20 @@ $(function () {
     mobileFirst: true
   }); 
 
+  $('.sales__items').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [{
+      breakpoint: 576,
+      settings: "unslick",
+    }],
+    mobileFirst: true
+  });
+
 
   var mixer = mixitup('.category');
 
