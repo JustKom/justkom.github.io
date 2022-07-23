@@ -76,6 +76,15 @@ $(function () {
     $(this).addClass('selected');
   });
 
+
+
+  $('.pagination__link').on('click', function () {
+    $('.pagination__link').removeClass('active');
+    $(this).addClass('active');
+  });
+
+
+
   $('.header__burger').on('click', function () {
     $('.header__burger, .menu__items').toggleClass('active');
     $('body').toggleClass('lock');
@@ -106,6 +115,20 @@ $(function () {
     ],
     mobileFirst: true
   }); 
+
+  $('.sales__items').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [{
+      breakpoint: 576,
+      settings: "unslick",
+    }],
+    mobileFirst: true
+  });
 
 
   var mixer = mixitup('.category');
