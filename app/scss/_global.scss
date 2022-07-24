@@ -6,6 +6,14 @@ body {
   font-weight: 400;
   outline: transparent;
   font-family: 'Rubik';
+
+  &.product__page {
+    background-color: $silver;
+  }
+
+  &.product__page .header {
+    background-color: #f9faff;
+  }
 }
 
 body.lock {

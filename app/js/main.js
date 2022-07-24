@@ -130,6 +130,17 @@ $(function () {
     mobileFirst: true
   });
 
+  $('.product__images').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+
+  
+
 
   var mixer = mixitup('.category');
 
