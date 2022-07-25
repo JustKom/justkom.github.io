@@ -139,6 +139,23 @@ $(function () {
     slidesToScroll: 1
   });
 
+
+
+  $(document).ready(function () {
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > $(window).height()) {
+        $('.header').css({
+          'padding': '15px 0'
+        });
+      } else {
+        $('.header').css({
+          'padding': ''
+        })
+      }
+
+    })
+  })
+
   
 
 
