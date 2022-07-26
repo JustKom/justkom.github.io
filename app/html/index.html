@@ -2,7 +2,9 @@
 'title': 'Simple Food | Главная страница',
 })
 
-  @include('components/_header.html')
+  @include('components/_header.html', {
+    'page': 'home'
+  })
 
   @include('components/_hero-section.html')
 
