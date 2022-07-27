@@ -147,12 +147,14 @@
         </a>
 
         <select class="prod-catalog__sort prod-catalog__select-style">
+          <span class="sr-only">Сортировать по: </span>
           <option value="">По названию</option>
           <option value="">По цене</option>
           <option value="">По популярности</option>
         </select>
 
         <select class="prod-catalog__amount prod-catalog__select-style">
+          <span class="sr-only">Количество продукции на странице: </span>
           <option value="">По 12</option>
           <option value="">По 24</option>
           <option value="">По 36</option>
@@ -164,6 +166,8 @@
     <div class="prod-catalog__inner">
       <div class="inner-filter popup" id="popup">
 
+        <h3 class="sr-only">Фильтр</h3>
+
         <a class="popup__close" href="#header">
           <svg class="popup__close-img">
             <use xlink:href="images/sprite.svg#close" width="18"></use>
@@ -171,7 +175,7 @@
         </a>
 
         <div class="inner-filter__block">
-          <h3 class="inner-filter__title">Категории</h3>
+          <h4 class="inner-filter__title">Категории</h4>
 
           <form class="inner-filter__form" action="#">
             <label class="inner-filter__label">
@@ -211,7 +215,7 @@
         </div>
 
         <div class="inner-filter__block block-purposes">
-          <h3 class="inner-filter__title">Предложения</h3>
+          <h4 class="inner-filter__title">Предложения</h4>
 
           <form class="inner-filter__form" action="#">
             <label class="inner-filter__label">
@@ -234,26 +238,27 @@
         </div>
 
         <div class="inner-filter__block block-price">
-          <h3 class="inner-filter__title">Цена</h3>
+          <h4 class="inner-filter__title">Цена</h4>
 
           <div class="block-price__inner">
 
             <div class="block-price__values">
+              <span class="sr-only">Указать диапазон цен</span>
               <label>
                 от
-                <input class="block-price__input-from" type="text" value="0" />
+                <input class="block-price__input-from" type="number" value="0" />
                 ₴
               </label>
               <label>
                 до
-                <input class="block-price__input-to" type="text" value="0" />
+                <input class="block-price__input-to" type="number" value="0" />
                 ₴
               </label>
 
             </div>
 
             <form class="inner-filter__form" action="#">
-              <input class="inner-filter__input-price" type="text" data-min="0" data-max="1200" data-from="100"
+              <input class="inner-filter__input-price" type="number" data-min="0" data-max="1200" data-from="100"
                 data-to="1000">
             </form>
 
@@ -271,8 +276,8 @@
               <a class="category__link" href="product_page.html">
                 <img class="category__img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата" width="140"
                   height="140">
-                <h3 class="category__text">Чизбургер с листьями салата
-                </h3>
+                <h4 class="category__text">Чизбургер с листьями салата
+                </h4>
               </a>
               <div>
                 <span class="category__price">160 грн.</span>
@@ -284,7 +289,7 @@
             <article class="category__item mix category-a">
               <a class="category__link" href="product_page.html">
                 <img class="category__img" src="images/burgers/2.jpg" alt="Бифбургер" width="140" height="140">
-                <h3 class="category__text">Бифбургер</h3>
+                <h4 class="category__text">Бифбургер</h4>
               </a>
               <div>
                 <span class="category__price">190 грн.</span>
@@ -297,7 +302,7 @@
               <a class="category__link" href="product_page.html">
                 <img class="category__img" src="images/burgers/3.jpg" alt="Королевский чизбургер" width="140"
                   height="140">
-                <h3 class="category__text">Королевский чизбургер</h3>
+                <h4 class="category__text">Королевский чизбургер</h4>
               </a>
               <div>
                 <span class="category__price">260 грн.</span>
@@ -309,7 +314,7 @@
             <article class="category__item mix category-a">
               <a class="category__link" href="product_page.html">
                 <img class="category__img" src="images/burgers/4.jpg" alt="Черный гамбургер" width="140" height="140">
-                <h3 class="category__text">Черный гамбургер</h3>
+                <h4 class="category__text">Черный гамбургер</h4>
               </a>
               <div>
                 <span class="category__price">199 грн.</span>
@@ -322,8 +327,8 @@
               <a class="category__link" href="product_page.html">
                 <img class="category__img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата" width="140"
                   height="140">
-                <h3 class="category__text">Чизбургер с листьями салата
-                </h3>
+                <h4 class="category__text">Чизбургер с листьями салата
+                </h4>
               </a>
               <div>
                 <span class="category__price">160 грн.</span>
@@ -335,7 +340,7 @@
             <article class="category__item mix category-a">
               <a class="category__link" href="product_page.html">
                 <img class="category__img" src="images/burgers/2.jpg" alt="Бифбургер" width="140" height="140">
-                <h3 class="category__text">Бифбургер</h3>
+                <h4 class="category__text">Бифбургер</h4>
               </a>
               <div>
                 <span class="category__price">190 грн.</span>
@@ -348,7 +353,7 @@
               <a class="category__link" href="product_page.html">
                 <img class="category__img" src="images/burgers/3.jpg" alt="Королевский чизбургер" width="140"
                   height="140">
-                <h3 class="category__text">Королевский чизбургер</h3>
+                <h4 class="category__text">Королевский чизбургер</h4>
               </a>
               <div>
                 <span class="category__price">260 грн.</span>
@@ -360,7 +365,7 @@
             <article class="category__item mix category-a">
               <a class="category__link" href="product_page.html">
                 <img class="category__img" src="images/burgers/4.jpg" alt="Черный гамбургер" width="140" height="140">
-                <h3 class="category__text">Черный гамбургер</h3>
+                <h4 class="category__text">Черный гамбургер</h4>
               </a>
               <div>
                 <span class="category__price">199 грн.</span>
@@ -373,8 +378,8 @@
               <a class="category__link" href="product_page.html">
                 <img class="category__img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата" width="140"
                   height="140">
-                <h3 class="category__text">Чизбургер с листьями салата
-                </h3>
+                <h4 class="category__text">Чизбургер с листьями салата
+                </h4>
               </a>
               <div>
                 <span class="category__price">160 грн.</span>
@@ -386,7 +391,7 @@
             <article class="category__item mix category-a">
               <a class="category__link" href="product_page.html">
                 <img class="category__img" src="images/burgers/2.jpg" alt="Бифбургер" width="140" height="140">
-                <h3 class="category__text">Бифбургер</h3>
+                <h4 class="category__text">Бифбургер</h4>
               </a>
               <div>
                 <span class="category__price">190 грн.</span>
@@ -399,7 +404,7 @@
               <a class="category__link" href="product_page.html">
                 <img class="category__img" src="images/burgers/3.jpg" alt="Королевский чизбургер" width="140"
                   height="140">
-                <h3 class="category__text">Королевский чизбургер</h3>
+                <h4 class="category__text">Королевский чизбургер</h4>
               </a>
               <div>
                 <span class="category__price">260 грн.</span>
@@ -411,7 +416,7 @@
             <article class="category__item mix category-a">
               <a class="category__link" href="product_page.html">
                 <img class="category__img" src="images/burgers/4.jpg" alt="Черный гамбургер" width="140" height="140">
-                <h3 class="category__text">Черный гамбургер</h3>
+                <h4 class="category__text">Черный гамбургер</h4>
               </a>
               <div>
                 <span class="category__price">199 грн.</span>
@@ -422,11 +427,12 @@
         </ul>
 
         <div class="pagination">
-          <a href="#" class="pagination_prev pagination__arrows">
+          <a href="#" class="pagination__arrows pagination__arrows--prev">
             <svg width="11" height="19" viewBox="0 0 11 19" fill="#c2c2c2" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M8.19676 18.0492L0.450821 10.3033C-0.150273 9.69905 -0.150273 8.72311 0.450821 8.11889L8.19676 0.372949C8.77613 -0.124317 9.63285 -0.124317 10.2122 0.372949C10.8614 0.929121 10.9372 1.90818 10.3811 2.55732L3.73512 9.20334L10.3811 15.8648C10.9822 16.469 10.9822 17.445 10.3811 18.0492C9.77691 18.6503 8.8009 18.6503 8.19676 18.0492Z" />
             </svg>
+            <span class="sr-only">Предыдущая страница</span>
           </a>
 
           <ul class="pagination__list">
@@ -461,11 +467,12 @@
             </li>
           </ul>
 
-          <a href="#" class="pagination_next pagination__arrows">
+          <a href="#" class="pagination__arrows pagination__arrows--next">
             <svg width="11" height="19" viewBox="0 0 11 19" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M2.80324 18.0492L10.5492 10.3033C11.1503 9.69905 11.1503 8.72311 10.5492 8.11889L2.80324 0.372949C2.22387 -0.124317 1.36715 -0.124317 0.787776 0.372949C0.138635 0.929121 0.0627753 1.90818 0.618947 2.55732L7.26488 9.20334L0.618868 15.8648C0.0177741 16.469 0.017774 17.445 0.618868 18.0492C1.22309 18.6503 2.1991 18.6503 2.80324 18.0492Z" />
             </svg>
+            <span class="sr-only">Следующая страница</span>
           </a>
         </div>
       </div>
@@ -497,7 +504,7 @@
       </ul>
     </div>
 
-    <img class="app__background" src="images/app-bg.jpg">
+    <img class="app__background" src="images/app-bg.jpg" alt="Картинка с приложением">
     </img>
   </div>
 </section>
