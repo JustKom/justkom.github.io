@@ -1,0 +1,78 @@
+.app {
+
+  margin-bottom: 120px;
+
+  @include mq('tablet') {
+    margin-bottom: 60px;
+  }
+
+  @include mq('phone') {
+    margin-bottom: 40px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__background {
+    width: 49%;
+    height: max-content;
+
+    @include mq('tablet') {
+      display: none;
+    }
+  }
+
+  .title,
+  &__text {
+    text-align: left;
+    max-width: 540px;
+    margin-bottom: 41px;
+
+    @include mq('phone') {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+
+    @include mq('phone') {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__list li:not(:last-child) {
+    margin-right: 33px;
+  }
+
+  &__list li:nth-child(1) {
+    background-image: url('../images/app-store.svg');
+    width: 120px;
+    height: 40px;
+    display: block;
+  }
+
+  &__list li:nth-child(2) {
+    background-image: url('../images/google-play.svg');
+    width: 135px;
+    height: 40px;
+  }
+
+  &__inner {
+    @include mq('desktop') {
+      margin-right: 20px;
+    }
+
+    @include mq('phone') {
+      padding: 0;
+    }
+  }
+}

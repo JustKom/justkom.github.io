@@ -91,7 +91,7 @@ $(function () {
   });
 
 
-  $('.slider').slick({
+  $('.review-slider').slick({
     dots: true,
     fade: true,
     prevArrow: '<button type="button" class="slick-prev"></button>',
@@ -145,11 +145,13 @@ $(function () {
     $(window).scroll(function () {
       if ($(window).scrollTop() > $(window).height()) {
         $('.header').css({
-          'padding': '15px 0'
+          'padding': '15px 0',
+          'border-bottom': '1px solid #ff6838'
         });
       } else {
         $('.header').css({
-          'padding': ''
+          'padding': '',
+          'border-bottom': '1px solid transparent'
         })
       }
 

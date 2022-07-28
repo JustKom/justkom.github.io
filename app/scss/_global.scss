@@ -39,6 +39,11 @@ button {
   line-height: 1.3;
   font-weight: 500;
   color: $text;
+
+  @include mq('phone') {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
 }
 
 a {
@@ -53,7 +58,6 @@ a {
 h2 {
   @extend %rubik-500;
 }
-
 
 .logo {
   padding: 5px 2px 2px 2px;
@@ -106,42 +110,38 @@ h2 {
   }
 }
 
-@media (max-width: 768px) {
-
-  .lock .header,
-  .lock {
+.lock .header,
+.lock {
+  @include mq('tablet') {
     box-shadow: inset 0 0 0 600px rgba(0, 0, 0, 0.5);
-    // z-index: 5;
   }
+}
 
-  .lock .hero-section__inner,
-  .lock .filter__btn,
-  .lock .category__item {
+.lock .hero-section__inner,
+.lock .filter__btn,
+.lock .category__item {
+  @include mq('tablet') {
     background-image: none !important;
     box-shadow: inset 0 0 0 600px rgba(0, 0, 0, 0);
     z-index: -10;
     background-color: transparent;
   }
+}
 
-  .lock .category__img {
+.lock .category__img {
+  @include mq('tablet') {
     display: none;
   }
 }
 
-@media (max-width: 576px) {
-  .button {
+.button {
+  @include mq('phone') {
     font-size: 16px;
   }
 
-  .title {
-    margin-bottom: 30px;
-    font-size: 24px;
-    color: $text;
-  }
 }
 
 .breadcrumps {
-  padding-top: 155px;
   background-color: rgba(255, 122, 80, 0.1);
 
   @include mq('tablet') {
@@ -176,7 +176,7 @@ h2 {
       }
     }
 
-    
+
   }
 }
 
@@ -200,6 +200,7 @@ h2 {
   }
 
   @include mq('phone') {
+
     .pagination__item:nth-child(2),
     .pagination__item:nth-child(4) {
       display: none;
@@ -241,11 +242,21 @@ h2 {
 
   &__arrows {
     svg {
-      transform: translateY(12px);
+      transform: translateY(13px);
+      width: 11px;
+      height: 18px;
     }
   }
 
-  &__arrows--next svg {
-    filter: invert(19%) sepia(16%) saturate(1146%) hue-rotate(197deg) brightness(99%) contrast(89%);
+  &__arrows--next {
+    fill: $text;
+
+    &:hover {
+      fill: #fff;
+    }
   }
+}
+
+.space {
+  height: 155px;
 }
