@@ -1,6 +1,6 @@
 $(function () {
 
-  $('.prod-catalog__select-style').styler();
+  $('.prod-catalog__select-style, .product__add-num').styler();
 
 
   var $range = $('.inner-filter__input-price');
@@ -71,8 +71,8 @@ $(function () {
 
 
 
-  $('.menu__link, .filter__btn').on('click', function () {
-    $('.menu__link, .filter__btn').removeClass('selected');
+  $('.menu__link, .filter__btn, .product__tabs-link').on('click', function () {
+    $('.menu__link, .filter__btn, .product__tabs-link').removeClass('selected');
     $(this).addClass('selected');
   });
 
@@ -159,7 +159,14 @@ $(function () {
   })
 
   
-
+  $('.product__stars').rateYo({
+    rating: 4,
+    starWidth: '16px',
+    normalFill: '#c1c1c1',
+    ratedFill: '#ffb800',
+    spacing: '6px',
+    halfStar: true
+  });
 
   var mixer = mixitup('.category');
 

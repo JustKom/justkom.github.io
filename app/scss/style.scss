@@ -15,16 +15,20 @@
 
 @import "./components/_footer.scss";
 
-@import "./components/catalog.scss";
+@import "./components/_catalog.scss";
 
 
 .product {
   margin: 60px 0 120px;
 
-  &__main .container {
-    display: flex;
+  &__main {
     padding-bottom: 60px;
     border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 30px;
+  }
+
+  &__main .container {
+    display: flex;
   }
 
   &__images {
@@ -70,8 +74,12 @@
     margin-bottom: 30px;
   }
 
-  &__rating {
+  &__stars {
     margin-bottom: 25px;
+  }
+
+  .jq-ry-container {
+    padding: 0;
   }
 
   &__price {
@@ -85,6 +93,92 @@
 
   &__add {
     margin-bottom: 30px;
+  }
+
+  .jq-number {
+    padding: 0 44px;
+  }
+
+  .jq-number__field {
+    width: 70px;
+    border: 1px solid transparent;
+    border-bottom-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .jq-number__field input {
+    width: 100%;
+    padding: 9px 17px;
+    border: transparent;
+    outline: transparent;
+    color: $text;
+    text-align: center;
+    background-color: $forms;
+    @extend %rubik-400;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+  }
+
+  .jq-number__spin {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 0;
+    background: $accent;
+    box-shadow: none;
+    text-shadow: none;
+    cursor: pointer;
+
+    &::after {
+      @include pseudo;
+      top: 20px;
+      left: 12px;
+      border: none;
+      border-radius: 50%;
+    }
+  }
+
+  .jq-number__spin.minus {
+    top: 0;
+    left: 0;
+    border-radius: 3px 0 0 3px;
+
+    &::after {
+      width: 20px;
+      height: 2px;
+      background-color: #fff;
+    }
+  }
+
+  .jq-number__spin.plus {
+    top: 0;
+    right: 0;
+    border-radius: 0 3px 3px 0;
+
+    &::before {
+      @include pseudo;
+      width: 2px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+      top: 11px;
+      left: 21px;
+    }
+
+    &::after {
+      width: 20px;
+      height: 2px;
+      background-color: #fff;
+    }
+  }
+
+  &__add-btn {
+    margin-left: 20px;
   }
 
   &__instruction-title {
@@ -107,5 +201,10 @@
   &__instruction-link {
     text-decoration: underline;
     color: $text;
+  }
+
+
+  &__tabs {
+
   }
 }

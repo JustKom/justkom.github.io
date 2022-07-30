@@ -51,6 +51,28 @@ a {
   padding: 0;
 }
 
+.link {
+  transition: color .3s, text-decoration .3s, text-shadow .3s;
+  outline: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  &:focus {
+    outline: $accent;
+    border-color: $accent;
+  }
+
+  &:hover {
+    color: $accent;
+    text-decoration: transparent;
+  }
+
+  &:active {
+    text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
+    color: $text;
+  }
+}
+
 .sr-only {
   display: none;
 }
@@ -108,6 +130,10 @@ h2 {
     color: $accent;
     fill: $accent;
   }
+}
+
+.selected {
+  color: $accent;
 }
 
 .lock .header,
@@ -169,10 +195,6 @@ h2 {
         background-size: cover;
         top: 4px;
         right: 2px;
-      }
-
-      &:hover {
-        color: $accent;
       }
     }
 
