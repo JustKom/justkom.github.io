@@ -1,6 +1,6 @@
 $(function () {
 
-  $('.prod-catalog__select-style').styler();
+  $('.prod-catalog__select-style, .product__add-num').styler();
 
 
   var $range = $('.inner-filter__input-price');
@@ -69,21 +69,24 @@ $(function () {
   });
 
 
+  $('.product__tabs-link').on('click', function (e) {
+    e.preventDefault();
+    $('.product__tabs-link').removeClass('product__tabs-link--selected');
+    $(this).addClass('product__tabs-link--selected');
 
-
-  $('.menu__link, .filter__btn').on('click', function () {
-    $('.menu__link, .filter__btn').removeClass('selected');
-    $(this).addClass('selected');
+    $('.product__tabs-items').removeClass('product__tabs-items--active');
+    $($(this).attr('href')).addClass('product__tabs-items--active');
   });
 
-
+  $('.menu__link, .filter__btn, .product__tabs-link').on('click', function () {
+    $('.menu__link, .filter__btn, .product__tabs-link').removeClass('selected');
+    $(this).addClass('selected');
+  });
 
   $('.pagination__link').on('click', function () {
     $('.pagination__link').removeClass('active');
     $(this).addClass('active');
   });
-
-
 
   $('.header__burger').on('click', function () {
     $('.header__burger, .menu__items').toggleClass('active');
@@ -91,7 +94,7 @@ $(function () {
   });
 
 
-  $('.slider').slick({
+  $('.review-slider').slick({
     dots: true,
     fade: true,
     prevArrow: '<button type="button" class="slick-prev"></button>',
@@ -130,6 +133,52 @@ $(function () {
     mobileFirst: true
   });
 
+  $('.product__images').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+
+  $('.offer__category').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    arrows: true,
+    slidesToShow: 5,
+    slidesToScroll: 1
+  });
+
+
+
+  $(document).ready(function () {
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > $(window).height()) {
+        $('.header').css({
+          'padding': '15px 0',
+          'border-bottom': '1px solid #ff6838'
+        });
+      } else {
+        $('.header').css({
+          'padding': '',
+          'border-bottom': '1px solid transparent'
+        })
+      }
+
+    })
+  })
+
+  
+  $('.stars').rateYo({
+    // rating: 4,
+    starWidth: '16px',
+    normalFill: '#c1c1c1',
+    ratedFill: '#ffb800',
+    spacing: '6px',
+    halfStar: true
+  });
 
   var mixer = mixitup('.category');
 

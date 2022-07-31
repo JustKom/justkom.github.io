@@ -2,20 +2,20 @@
   <div class="container">
     <nav class="menu">
 
-      <a class="logo" href="#">
+      <a class="logo" href="index.html">
         <img class="logo-img" src="images/SimpleFood.svg" width="200" height="39" alt="Логотип сайта Simple-Food">
       </a>
 
       <ul class="menu__items">
 
         <li class="menu__item">
-          <a href="#" class="menu__link selected">Главная</a>
+          <a class="menu__link @if(context.page==='home') {selected}" href="index.html">Главная</a>
         </li>
         <li class="menu__item">
-          <a href="#" class="menu__link">Блюда</a>
+          <a class="menu__link @if(context.page==='catalog') {selected}" href="catalog.html">Блюда</a>
         </li>
         <li class="menu__item">
-          <a href="#" class="menu__link">Контакты</a>
+          <a class="menu__link @if(context.page==='contacts') {selected}" href="#">Контакты</a>
         </li>
 
         <li class="menu__item burger__contacts">
