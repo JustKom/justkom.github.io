@@ -132,7 +132,8 @@ h2 {
   }
 }
 
-.selected {
+.selected,
+.product__tabs-link--selected {
   color: $accent;
 }
 

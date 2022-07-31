@@ -74,8 +74,12 @@
     margin-bottom: 30px;
   }
 
-  &__stars {
+  .stars {
     margin-bottom: 25px;
+  }
+
+  .jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-rated-group {
+    z-index: 10;
   }
 
   .jq-ry-container {
@@ -205,6 +209,259 @@
 
 
   &__tabs {
+    max-width: 690px;
+    width: 100%;
+    margin: 0 auto;
+  }
 
+  &__tabs-top {
+    margin-bottom: 30px;
+    color: $text;
+
+    .link {
+      font-size: 24px;
+
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+  }
+
+  &__tabs-items {
+    display: none;
+
+    &.product__tabs-items--active {
+      display: block;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__tabs-item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  .tabs-title {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .comments {
+    margin-bottom: 60px;
+  }
+
+  .comment {
+
+    &:not(:last-child) {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e4e4e4;
+    }
+
+    &:not(:first-child) {
+      padding-top: 25px;
+    }
+
+  }
+
+  .comment-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .comment-photo {
+    margin-right: 25px;
+  }
+
+  .comment-info {
+    color: $comment;
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+
+    span {
+      font-weight: 500;
+      display: block;
+      font-size: 20px;
+      line-height: 2;
+    }
+  }
+
+  .comment-stars {
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+
+  .comment-form {
+
+    &__label {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 20px;
+    }
+
+    &__name,
+    &__text,
+    &__email {
+      margin-top: 15px;
+      padding: 16px 18px;
+      font-size: 16px;
+      border: 1px solid $gray;
+      border-radius: 5px;
+      outline: transparent;
+      transition: box-shadow .3s;
+
+      &::placeholder {
+        color: #c1c1c1;
+      }
+
+      &:focus {
+        box-shadow: 0px 0px 0px 2px #FF6838;
+      }
+    }
+
+    &__name,
+    &__email {
+      max-width: 260px;
+    }
+  }
+
+  .form-stars {
+    margin-left: 15px;
+    margin-bottom: 0;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .comment-form__text {
+    max-width: 400px;
+    width: 100%;
+    height: 165px;
+    overflow: hidden;
+  }
+
+  .comment-form__inputs {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  .comment-form__label-input {
+    display: grid;
+    width: 100%;
+    color: #505050;
+    line-height: 1.3;
+
+    &:first-child {
+      margin-right: 30px;
+    }
+
+    &:last-child {
+      margin-top: 15px;
+    }
+  }
+
+  .comment-form__label-check {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+
+  .comment-form__input-check {
+
+    @include checkbox-hidden;
+
+    &:checked+.comment-form__item-check {
+      color: $accent;
+    }
+  }
+
+  .comment-form__checkbox {
+    margin-right: 10px;
+    width: 30px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #c1c1c1;
+  }
+
+  .comment-form__item-check {
+    font-size: 18px;
+    line-height: 1.3;
+    color: #505050;
+    border: 1px solid transparent;
+  }
+
+}
+
+.offer {
+  margin-bottom: 120px;
+  
+  .title {
+    text-align: left;
+  }
+
+  .category {
+    grid-template-columns: repeat(1, 1fr);
+    position: relative;
+  }
+
+  .slick-slide img {
+    display: inline-block;
+  }
+
+  .slick-initialized .slick-slide {
+    display: block;
+    margin: 0 15px;
+    padding: 2px;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    right: 0;
+    top: -80px;
+    font-size: 0;
+    width: 34px;
+    height: 20px;
+    background-repeat: no-repeat;
+
+    &::after {
+      @include pseudo;
+      width: 34px;
+      height: 34px;
+      border: 3px solid $gray;
+      border-radius: 50%;
+      top: -7px;
+    }
+  }
+
+  .slick-prev {
+    background-image: url('../images/sprite.svg#prev-arrow');
+    right: 55px;
+
+    &::after {
+      right: 6px;
+    }
+  }
+
+  .slick-next {
+    background-image: url('../images/sprite.svg#next-arrow');
+    filter: invert(86%) sepia(0%) saturate(11%) hue-rotate(119deg) brightness(97%) contrast(85%);
+
+    &::after {
+      right: 8px;
+      filter: invert(0) sepia(0%) saturate(0%) hue-rotate(40deg) brightness(0%) contrast(82%);
+    }
   }
 }
