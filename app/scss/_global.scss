@@ -265,13 +265,17 @@ h2 {
 
   &__arrows {
     svg {
-      transform: translateY(13px);
-      width: 11px;
-      height: 18px;
+      transform: translateY(7px);
+      width: 30px;
+      height: 30px;
+
+      use {
+        transform: translateX(-10px);
+      }
     }
   }
 
-  &__arrows--next {
+  &__arrows {
     fill: $text;
 
     &:hover {

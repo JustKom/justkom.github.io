@@ -62,7 +62,11 @@
 
           <div class="product__add">
             <input class="product__add-num" type="number" value="1" min="1">
-            <button class="product__add-btn button" type="submit">Добавить в корзину</button>
+            <button class="product__add-btn button" type="submit">
+              <svg class="cart-add">
+                <use xlink:href="images/sprite.svg#Carticon" stroke-width="2" width="16" height="16"></use>
+              </svg>
+              <span>Добавить в корзину</span></button>
           </div>
 
           <div class="product__instruction">
@@ -162,12 +166,12 @@
             <div class="comment-form__input-items">
               <label class="comment-form__label-input">
                 Имя
-                <input class="comment-form__name" type="text" placeholder="Введите текст отзыва"></input>
+                <input class="comment-form__name" type="text" placeholder="Введите ваше имя"></input>
               </label>
 
               <label class="comment-form__label-input">
                 Email *
-                <input class="comment-form__email" type="text" placeholder="Введите текст отзыва" required></input>
+                <input class="comment-form__email" type="text" placeholder="youremail@mail.com" required></input>
               </label>
             </div>
           </div>

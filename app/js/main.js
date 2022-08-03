@@ -155,7 +155,7 @@ $(function () {
 
   $(document).ready(function () {
     $(window).scroll(function () {
-      if ($(window).scrollTop() > $(window).height()) {
+      if ($(window).scrollTop() > 200) {
         $('.header').css({
           'padding': '15px 0',
           'border-bottom': '1px solid #ff6838'
