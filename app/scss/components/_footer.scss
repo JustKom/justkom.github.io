@@ -1,6 +1,4 @@
 .footer {
-  padding: 0 4px;
-
   &__top {
     display: flex;
     margin-bottom: 60px;
@@ -17,7 +15,6 @@
       display: flex;
       flex-direction: column-reverse;
       position: relative;
-      margin-bottom: 30px;
     }
 
     &:nth-child(2) {
@@ -42,10 +39,6 @@
 
   .logo__footer {
     margin-bottom: 30px;
-
-    @include mq('phone') {
-      margin-bottom: 28px;
-    }
   }
 
   &__email-input {
@@ -181,7 +174,7 @@
     position: relative;
 
     @include mq('phone') {
-      margin-top: 196px;
+      margin-top: 200px;
       margin-bottom: 30px;
     }
   }
