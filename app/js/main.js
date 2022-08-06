@@ -110,14 +110,12 @@ $(function () {
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: "unslick",
-      }
-    ],
+    responsive: [{
+      breakpoint: 768,
+      settings: "unslick",
+    }],
     mobileFirst: true
-  }); 
+  });
 
   $('.sales__items').slick({
     dots: true,
@@ -128,7 +126,7 @@ $(function () {
     slidesToScroll: 1,
     responsive: [{
       breakpoint: 576,
-      settings: "unslick",
+      settings: 'unslick',
     }],
     mobileFirst: true
   });
@@ -139,7 +137,13 @@ $(function () {
     speed: 300,
     arrows: true,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [{
+      breakpoint: 769,
+      settings: {
+        arrows: false
+      }
+    }]
   });
 
   $('.offer__category').slick({
@@ -148,7 +152,31 @@ $(function () {
     speed: 300,
     arrows: true,
     slidesToShow: 5,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [{
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 4,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        dots: true,
+        slidesToScroll: 3,
+        arrows: false
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots: true
+      }
+    }]
   });
 
 
@@ -170,7 +198,7 @@ $(function () {
     })
   })
 
-  
+
   $('.stars').rateYo({
     // rating: 4,
     starWidth: '16px',

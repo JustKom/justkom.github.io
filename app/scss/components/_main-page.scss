@@ -627,13 +627,10 @@
     background-repeat: no-repeat;
     background-size: contain;
 
+
     @include mq('tablet') {
       position: absolute;
       top: 40px;
-    }
-
-    &:hover {
-      fill: $accent;
     }
 
     &::before {
@@ -645,10 +642,25 @@
       border-radius: 50%;
       transform: translateY(-58%);
       left: -10px;
+    }
 
-      &:hover {
-        border: 3px solid $accent;
-      }
+    &::after {
+      @include pseudo;
+      width: 43px;
+      height: 43px;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      transform: translateY(-58%);
+      left: -12px;
+      transition: border-color .3s;
+    }
+
+    &:focus::after {
+      border-color: $accent;
+    }
+
+    &:hover {
+      filter: invert(3%) sepia(2%) saturate(5873%) hue-rotate(320deg) brightness(106%) contrast(97%);
     }
   }
 
@@ -668,6 +680,10 @@
   .slick-next {
     background-image: url('../images/sprite.svg#next-arrow');
     right: 41%;
+
+    &::after {
+      left: -11px;
+    }
 
     @include mq('tablet-2') {
       right: 10px;
@@ -694,10 +710,15 @@
         background-color: #C2C2C2;
         width: 15px;
         height: 15px;
+        border: 2px solid transparent;
         border-radius: 50%;
         color: transparent;
         font-size: 5px;
-        transition: background-color .3s;
+        transition: background-color .3s, border-color .3s;
+        
+        &:focus {
+          border-color: $accent;
+        }
       }
     }
 
