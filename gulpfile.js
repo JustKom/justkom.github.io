@@ -4,6 +4,7 @@ const concat       = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify       = require('gulp-uglify');
 const imagemin     = require('gulp-imagemin');
+const del          = require('del');
 const browserSync  = require('browser-sync').create();
 const svgSprite    = require('gulp-svg-sprite');
 const fileInclude  = require('gulp-file-include');
@@ -72,8 +73,13 @@ function build() {
     'app/**/*.html',
     'app/css/style.min.css',
     'app/js/main.min.js'
-  ])
+  ], {base: 'app'})
   .pipe(dest('dist'))
+}
+
+
+function cleanDist() {
+  return del('dist')
 }
 
 
@@ -115,17 +121,15 @@ function watching() {
 }
 
 
-
-
-
-
 exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.images = images;
 exports.svgSprites = svgSprites;
 exports.htmlInclude = htmlInclude;
+exports.cleanDist = cleanDist;
 exports.build = build;
+exports.distBuild = series(cleanDist, images, build);
 
 exports.watching = watching;
 exports.default = parallel(htmlInclude, svgSprites, styles, scripts, browsersync, watching);
