@@ -3,12 +3,13 @@ const scss         = require('gulp-sass')(require('sass'));
 const concat       = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify       = require('gulp-uglify');
-const del          = require('del');
+// const del          = require('del');
 const imagemin     = require('gulp-imagemin');
 const browserSync  = require('browser-sync').create();
 const svgSprite    = require('gulp-svg-sprite');
 const fileInclude  = require('gulp-file-include');
 const ghpages      = require('gh-pages');
+var build          = require('gulp-build');
 
 
 function browsersync() {
@@ -29,7 +30,7 @@ function styles() {
         overrideBrowserslist: ['last 10 versions'],
         grid: true
     }))
-    .pipe(dest('app/css'))
+    .pipe(dest('dist/css'))
     .pipe(browserSync.stream())
 }
 
@@ -46,7 +47,7 @@ function scripts() {
     ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
-    .pipe(dest('app/js'))
+    .pipe(dest('dist/js'))
     .pipe(browserSync.stream())
 }
 
@@ -78,9 +79,9 @@ function build() {
 }
 
 
-function cleanDist() {
-    return del('dist')
-}
+// function cleanDist() {
+//     return del('dist')
+// }
 
 const htmlInclude = () => {
   return src(['app/html/*.html'])
@@ -126,6 +127,6 @@ exports.svgSprites = svgSprites;
 exports.htmlInclude = htmlInclude;
 
 exports.watching = watching;
-exports.build = series(cleanDist, images, build);
-exports.cleanDist = cleanDist;
+exports.build = series(images, build);
+// exports.cleanDist = cleanDist;
 exports.default = parallel(htmlInclude, svgSprites, styles, scripts, browsersync, watching);
