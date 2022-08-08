@@ -1,0 +1,40 @@
+@include('components/_head.html', {
+'title': 'Simple Food | Каталог товаров',
+})
+
+@include('components/_header.html', {
+'page': 'catalog'
+})
+
+@include('components/_space.html')
+
+  <main class="main">
+
+    <h1 class="sr-only">Каталог</h1>
+
+    <section class="breadcrumps">
+      <div class="container">
+
+        <h2 class="sr-only">Навигация по сайту</h2>
+        <ul class="breadcrumps__list">
+          <li class="breadcrumps__item">
+            <a class="link" href="index.html">Главная</a>
+          </li>
+          <li class="breadcrumps__item">
+            <span href="#">Каталог товаров</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    @include('components/_prod-catalog.html')
+
+    @include('components/_app.html')
+
+    @include('components/_sales.html')
+
+  </main>
+
+  @include('components/_footer.html')
+
+  @include('components/_footer-scripts.html')
