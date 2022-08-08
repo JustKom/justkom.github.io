@@ -109,9 +109,6 @@ function svgSprites() {
 }
 
 
-ghpages.publish('dist', function (err) {});
-
-
 function watching() {
     watch(['app/scss/**/*.scss'], styles);
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
@@ -119,6 +116,9 @@ function watching() {
     watch(['app/images/icons/*.svg'], svgSprites);
     watch(['app/html/**/*.html'], htmlInclude);
 }
+
+
+ghpages.publish('dist', function (err) {});
 
 
 exports.styles = styles;
