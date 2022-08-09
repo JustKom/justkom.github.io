@@ -68,6 +68,12 @@ function images() {
 }
 
 
+function fonts() {
+  return src('app/fonts/**/*.{woff, woff2}')
+    .pipe(dest('dist/fonts'))
+}
+
+
 function build() {
   return src ([
     'app/**/*.html',
@@ -111,7 +117,6 @@ function svgSprites() {
 
 ghpages.publish('dist', function (err) {});
 
-
 function watching() {
     watch(['app/scss/**/*.scss'], styles);
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
@@ -127,6 +132,7 @@ exports.browsersync = browsersync;
 exports.images = images;
 exports.svgSprites = svgSprites;
 exports.htmlInclude = htmlInclude;
+exports.fonts = fonts;
 exports.cleanDist = cleanDist;
 exports.build = build;
 exports.distBuild = series(cleanDist, images, build);
