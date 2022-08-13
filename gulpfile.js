@@ -115,7 +115,10 @@ function svgSprites() {
 }
 
 
-ghpages.publish('dist', callback);
+ghpages.publish('dist', {
+  branch: 'simple_food',
+  repo: 'https://justkom.github.io/simple_food.git'
+}, callback);
 
 function watching() {
     watch(['app/scss/**/*.scss'], styles);
