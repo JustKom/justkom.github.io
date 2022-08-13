@@ -115,7 +115,7 @@ function svgSprites() {
 }
 
 
-ghpages.publish('dist', function (err) {});
+ghpages.publish('dist', callback);
 
 function watching() {
     watch(['app/scss/**/*.scss'], styles);
