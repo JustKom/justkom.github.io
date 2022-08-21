@@ -171,10 +171,6 @@ h2 {
 .breadcrumps {
   background-color: rgba(255, 122, 80, 0.1);
 
-  @include mq('tablet') {
-    padding-top: 70px;
-  }
-
   &__list {
     padding: 24px 0;
     display: flex;
@@ -198,8 +194,12 @@ h2 {
         right: 2px;
       }
     }
+  }
 
-
+  @include mq('tablet') {
+    .intermediate {
+      display: none;
+    }
   }
 }
 
@@ -286,4 +286,8 @@ h2 {
 
 .space {
   height: 155px;
+
+  @include mq('tablet') {
+    height: 71px;
+  }
 }

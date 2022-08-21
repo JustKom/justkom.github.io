@@ -9,6 +9,8 @@
   "author": "Halchenko",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "@fancyapps/ui": "^4.0.31",
     "browser-sync": "^2.27.10",
     "del": "^6.1.1",
     "gh-pages": "^4.0.0",
@@ -28,8 +30,5 @@
     "rateyo": "^2.3.5",
     "sass": "^1.52.3",
     "slick-carousel": "^1.8.1"
-  },
-  "dependencies": {
-    "@fancyapps/ui": "^4.0.27"
   }
 }
