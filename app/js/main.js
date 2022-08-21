@@ -110,14 +110,12 @@ $(function () {
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: "unslick",
-      }
-    ],
+    responsive: [{
+      breakpoint: 768,
+      settings: "unslick",
+    }],
     mobileFirst: true
-  }); 
+  });
 
   $('.sales__items').slick({
     dots: true,
@@ -137,20 +135,49 @@ $(function () {
     dots: false,
     infinite: true,
     speed: 300,
-    arrows: true,
+    arrows: false,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        arrows: true
+      }
+    }],
+    mobileFirst: true
   });
 
   $('.offer__category').slick({
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 300,
-    arrows: true,
-    slidesToShow: 5,
-    slidesToScroll: 1
+    arrows: false,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [{
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: true,
+          dots: false,
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 5,
+          dots: false
+        }
+      }
+    ],
+    mobileFirst: true
   });
-
 
 
   $(document).ready(function () {
@@ -170,9 +197,8 @@ $(function () {
     })
   })
 
-  
+
   $('.stars').rateYo({
-    // rating: 4,
     starWidth: '16px',
     normalFill: '#c1c1c1',
     ratedFill: '#ffb800',
