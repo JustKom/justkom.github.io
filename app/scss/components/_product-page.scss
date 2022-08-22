@@ -2,7 +2,7 @@
   margin: 60px 0 120px;
 
   @include mq('tablet') {
-    margin: 0 0 45px;
+    margin: 30px 0 45px;
   }
 
   &__main {
@@ -27,20 +27,22 @@
     max-width: 610px;
     width: 100%;
     margin-right: 30px;
-    height: 550px;
+    max-height: 550px;
+    height: 100%;
     background-color: #fff;
     border-radius: 5px;
+    border: 1px solid $silver;
 
     @include mq('tablet-2') {
-      margin: 0 auto;
+      margin: 0 auto 30px;
     }
 
     @include mq('tablet') {
-      height: 500px;
+      // height: 500px;
     }
 
     @include mq('phone') {
-      height: 435px;
+      // height: 435px;
     }
   }
 
@@ -75,39 +77,54 @@
   }
 
   .slick-track {
-    left: 18%;
-    top: 50px;
-    transform: translate3d(0, -15px, 0px);
+    // left: 18%;
+    // top: 50px;
+    // transform: translate3d(0, -15px, 0px);
 
     @include mq('tablet') {
-      left: 16%;
+      // left: 0;
     }
 
     @include mq('phone') {
-      left: 0;
+      // left: 12%;
     }
   }
 
-  .slick-list {
-    padding-bottom: 50px;
-  }
+  // .slick-list {
+  //   padding-bottom: 50px;
+  // }
 
   .slick-initialized .slick-slide {
     display: flex;
   }
 
-  .product__image-img {
+  .slick-slide {
     
-    border-radius: 5px;
-    border: 1px solid $silver;
+    justify-content: center;
+    
+  }
+
+  // .product__image-img {
+
+  //   border-radius: 5px;
+  //   border: 1px solid $silver;
+  // }
+
+  .slick-list {
+    padding: 75px 0 !important;
+    height: 100%;
+
+    @include mq('phone') {
+      padding: 23px 0 !important;
+    }
   }
 
   &__image {
-    transform: translateY(18%);
+    // transform: translateY(18%);
     display: contents !important;
   }
 
-  
+
 
   .title {
     margin-bottom: 30px;
@@ -326,17 +343,14 @@
     max-width: 690px;
     width: 100%;
     margin: 0 auto;
-      padding: 0 15px;
+    padding: 0 15px;
   }
 
   &__tabs-top {
     margin-bottom: 30px;
     color: $text;
-
-    @include mq('tablet') {
-      display: flex;
-      overflow: scroll;
-    }
+    display: flex;
+    overflow: overlay;
 
     .link {
       font-size: 24px;
@@ -464,19 +478,19 @@
       }
     }
 
-    
+
 
     &__name,
     &__email {
       max-width: 260px;
     }
   }
-  
+
   .comment-text {
-      @include mq('tablet') {
-        font-size: 16px;
-      }
+    @include mq('tablet') {
+      font-size: 16px;
     }
+  }
 
   .form-stars {
     margin-left: 15px;
@@ -548,7 +562,7 @@
 
 }
 
-.fancybox__container{
+.fancybox__container {
   @include mq('tablet') {
     display: none;
   }
@@ -736,7 +750,7 @@
       top: -7px;
     }
 
-    
+
   }
 
   .slick-prev {
