@@ -148,35 +148,39 @@ $(function () {
   });
 
   $('.offer__category').slick({
-    dots: true,
+    arrows: true,
+    dots: false,
     infinite: true,
     speed: 300,
-    arrows: false,
-    slidesToShow: 2,
+    slidesToShow: 5,
     slidesToScroll: 2,
-    responsive: [{
-        breakpoint: 576,
+    responsive: [
+      {
+        breakpoint: 1200,
         settings: {
-          slidesToShow: 3
+          slidesToShow: 4,
+          arrows: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          arrows: false,
+          dots: true
         }
       },
       {
         breakpoint: 768,
         settings: {
-          arrows: true,
-          dots: false,
-          slidesToShow: 4
-        }
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 5,
-          dots: false
+          slidesToShow: 2,
+          arrows: false,
+          dots: true
         }
       }
-    ],
-    mobileFirst: true
+    ]
+    // mobileFirst: true
   });
 
 
