@@ -147,6 +147,16 @@ $(function () {
     mobileFirst: true
   });
 
+  // const fancybox = Fancybox.show([{
+  //     src: "../images/burgers/big/1.jpg",
+  //     type: "image",
+  //   },
+  //   {
+  //     src: "https://lipsum.app/id/99/800x600",
+  //     type: "image",
+  //   },
+  // ]);
+
   $('.offer__category').slick({
     arrows: true,
     dots: false,
