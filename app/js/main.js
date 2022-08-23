@@ -147,29 +147,7 @@ $(function () {
     mobileFirst: true
   });
 
-  var gallery = [{
-      src: "../images/burgers/big/1.jpg",
-      thumb: "../images/burgers/big/1.jpg",
-      caption: "First image",
-    },
-    {
-      src: "../images/burgers/big/1.jpg",
-      thumb: "../images/burgers/big/1.jpg",
-      caption: "Second image",
-    },
-    {
-      src: "../images/burgers/big/1.jpg",
-      thumb: "../images/burgers/big/1.jpg",
-      caption: "Third image",
-    },
-  ];
 
-  Fancybox.show(gallery, {
-    Image: {
-      // Image-specific options go here, for example:
-      // click: 'close'
-    },
-  });
 
   $('.offer__category').slick({
     arrows: true,
