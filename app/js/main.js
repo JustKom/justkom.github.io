@@ -147,70 +147,92 @@ $(function () {
     mobileFirst: true
   });
 
-  
-
-$('.offer__category').slick({
-  arrows: true,
-  dots: false,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 5,
-  slidesToScroll: 2,
-  responsive: [{
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 4,
-        arrows: true,
-        dots: false
-      }
+  var gallery = [{
+      src: "../images/burgers/big/1.jpg",
+      thumb: "../images/burgers/big/1.jpg",
+      caption: "First image",
     },
     {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 3,
-        arrows: false,
-        dots: true
-      }
+      src: "../images/burgers/big/1.jpg",
+      thumb: "../images/burgers/big/1.jpg",
+      caption: "Second image",
     },
     {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        arrows: false,
-        dots: true
+      src: "../images/burgers/big/1.jpg",
+      thumb: "../images/burgers/big/1.jpg",
+      caption: "Third image",
+    },
+  ];
+
+  Fancybox.show(gallery, {
+    Image: {
+      // Image-specific options go here, for example:
+      // click: 'close'
+    },
+  });
+
+  $('.offer__category').slick({
+    arrows: true,
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 5,
+    slidesToScroll: 2,
+    responsive: [{
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          arrows: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          arrows: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+          dots: true
+        }
       }
-    }
-  ]
-  // mobileFirst: true
-});
+    ]
+    // mobileFirst: true
+  });
 
 
-$(document).ready(function () {
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 200) {
-      $('.header').css({
-        'padding': '15px 0',
-        'border-bottom': '1px solid #ff6838'
-      });
-    } else {
-      $('.header').css({
-        'padding': '',
-        'border-bottom': '1px solid transparent'
-      })
-    }
+  $(document).ready(function () {
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 200) {
+        $('.header').css({
+          'padding': '15px 0',
+          'border-bottom': '1px solid #ff6838'
+        });
+      } else {
+        $('.header').css({
+          'padding': '',
+          'border-bottom': '1px solid transparent'
+        })
+      }
 
+    })
   })
-})
 
 
-$('.stars').rateYo({
-  starWidth: '16px',
-  normalFill: '#c1c1c1',
-  ratedFill: '#ffb800',
-  spacing: '6px',
-  halfStar: true
-});
+  $('.stars').rateYo({
+    starWidth: '16px',
+    normalFill: '#c1c1c1',
+    ratedFill: '#ffb800',
+    spacing: '6px',
+    halfStar: true
+  });
 
-var mixer = mixitup('.category');
+  var mixer = mixitup('.category');
 
 });
