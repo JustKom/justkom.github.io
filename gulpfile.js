@@ -137,7 +137,7 @@ exports.htmlInclude = htmlInclude;
 exports.fonts = fonts;
 exports.cleanDist = cleanDist;
 exports.build = build;
-exports.distBuild = series(cleanDist, images, build);
+exports.distBuild = series(cleanDist, images, fonts, build);
 
 exports.watching = watching;
 exports.default = parallel(htmlInclude, svgSprites, styles, scripts, browsersync, watching);
