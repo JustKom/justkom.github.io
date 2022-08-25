@@ -71,7 +71,7 @@ function images() {
 
 
 function fonts() {
-  return src('app/fonts/**/*.{woff, woff2}')
+  return src('app/fonts/**/*.{woff2, woff}')
     .pipe(dest('dist/fonts'));
 };
 
