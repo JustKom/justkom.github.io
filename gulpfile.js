@@ -9,7 +9,6 @@ const browserSync  = require('browser-sync').create();
 const svgSprite    = require('gulp-svg-sprite');
 const fileInclude  = require('gulp-file-include');
 const ghpages      = require('gh-pages');
-// const mixitup      = require('mixitup');
 
 
 function browsersync() {
