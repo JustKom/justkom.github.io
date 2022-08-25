@@ -147,7 +147,9 @@ $(function () {
     mobileFirst: true
   });
 
-
+  Fancybox.bind("[data-fancybox]", {
+    
+  });
 
   $('.offer__category').slick({
     arrows: true,
