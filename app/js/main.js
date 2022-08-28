@@ -148,7 +148,7 @@ $(function () {
   });
 
   Fancybox.bind("[data-fancybox]", {
-    
+    type: 'image'
   });
 
   $('.offer__category').slick({
