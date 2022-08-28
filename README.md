@@ -1,1 +1,0 @@
-# justkom.github.io
