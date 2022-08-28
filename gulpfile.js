@@ -70,8 +70,13 @@ function images() {
 }
 
 
+// function fonts() {
+//   return src('app/fonts/**/*.{woff2, woff}')
+//     .pipe(dest('dist/fonts'));
+// };
+
 function fonts() {
-  return src('app/fonts/**/*.{woff2, woff}')
+  return src('app/fonts/**/*.{woff,woff2}')
     .pipe(dest('dist/fonts'));
 };
 
