@@ -9,12 +9,13 @@
     padding: 11px 22px 8px 0;
   }
 
-  .logo {
+  .logo-img  {
     margin-left: 5px;
     z-index: 2;
 
     @include mq('phone') {
       width: 115px;
+      height: auto;
     }
   }
 
